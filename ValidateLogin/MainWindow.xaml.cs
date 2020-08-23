@@ -66,7 +66,14 @@ namespace ValidateLogin
             }
             else
             {
-                MessageBox.Show($"Welcome {_customerLogin.UserName}");
+
+                Hide();
+
+                var workWindow = new WorkWindow();
+                Application.Current.MainWindow = workWindow;
+                workWindow.ShowDialog();
+
+                Close();
             }
 
         }
