@@ -2,6 +2,10 @@
 
 Simple WPF login demonstration using data annotations using a custom validation rule.
 
+### Requires
+
+For work window image animation [WPF Animated GIF](http://example.com). Perform a NuGet restore packages before building the solution.
+
 ![screenshot](assets/Login.png)
 
 Usually, to protect someone for guessing a user's password a common practice is to require upper-case characters, include at least one numeric and one special character. The following class provides a place to set rules as per uppercased, numeric and special chars.
