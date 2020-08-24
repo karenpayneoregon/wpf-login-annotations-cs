@@ -9,7 +9,7 @@
         Height="251.129"
         Width="320.12" 
         WindowStartupLocation="CenterScreen" 
-        ResizeMode="NoResize" Closing="MainWindow_OnClosing">
+        ResizeMode="NoResize" Closing="MainWindow_OnClosing" KeyDown="Window_KeyDown">
 
 
     <Window.CommandBindings>
@@ -32,7 +32,7 @@
         <Label Content="Confirm" HorizontalAlignment="Left" Margin="29,110,0,0" VerticalAlignment="Top"/>
         <PasswordBox x:Name="PasswordTextBox" PasswordChanged="PasswordTextBox_OnPasswordChanged"  HorizontalAlignment="Left" Margin="88,70,0,0" VerticalAlignment="Top" Width="187" Height="23"/>
         <PasswordBox x:Name="PasswordConfirmTextBox" PasswordChanged="PasswordConfirmTextBox_OnPasswordChanged" HorizontalAlignment="Left" Margin="88,113,0,0" VerticalAlignment="Top" Width="187" Height="23"/>
-        <Button Content="Continue" Command="{x:Static local:MainWindow.ContinueRoutedCommand}" HorizontalAlignment="Left" Margin="23,173,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Continue"  Command="{x:Static local:MainWindow.ContinueRoutedCommand}" HorizontalAlignment="Left" Margin="23,173,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Cancel" Command="{x:Static local:MainWindow.ExitRoutedCommand}"  HorizontalAlignment="Left" Margin="200,173,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>

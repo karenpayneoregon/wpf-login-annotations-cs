@@ -45,12 +45,15 @@ namespace ValidateLogin
         /// <param name="e"></param>
         private void PasswordCheckCommandOnExecute(object sender, ExecutedRoutedEventArgs e)
         {
+            ProcessLogin();
+        }
 
+        private void ProcessLogin()
+        {
             EntityValidationResult validationResult = ValidationHelper.ValidateEntity(_customerLogin);
 
             if (validationResult.HasError)
             {
-
                 _retryCount += 1;
 
                 if (_retryCount >= 3)
@@ -62,11 +65,9 @@ namespace ValidateLogin
                 {
                     MessageBox.Show(validationResult.ErrorMessageList());
                 }
-
             }
             else
             {
-
                 Hide();
 
                 var workWindow = new WorkWindow();
@@ -75,8 +76,8 @@ namespace ValidateLogin
 
                 Close();
             }
-
         }
+
         private void PasswordCheckCanExecuteCommand(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = _retryCount < 3;
@@ -130,6 +131,14 @@ namespace ValidateLogin
         private void PasswordTextBox_OnPasswordChanged(object sender, RoutedEventArgs e)
         {
             _customerLogin.Password = ((PasswordBox)sender).Password;
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                ProcessLogin();
+            }
         }
     }
 
