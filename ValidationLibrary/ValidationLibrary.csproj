@@ -50,6 +50,8 @@
     <Compile Include="ValidationHelper.cs" />
     <Compile Include="ExtensionMethods\ValidatorExtensions.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="readme.md" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

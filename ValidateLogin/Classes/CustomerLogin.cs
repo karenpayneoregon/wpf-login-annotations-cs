@@ -10,7 +10,7 @@ namespace ValidateLogin.Classes
         /// </summary>
         /// <returns>User name for login</returns>
         [Required(ErrorMessage = "{0} is required"), DataType(DataType.Text)]
-        [StringLength(20, MinimumLength = 6)]
+        [StringLength(10, MinimumLength = 6)]
         public string UserName { get; set; }
         /// <summary>
         /// User password which must match PasswordConfirmation using

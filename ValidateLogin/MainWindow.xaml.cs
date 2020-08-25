@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using ValidateLogin.Classes;
+using ValidateLogin.Classes.ValidationRules;
 using ValidationLibrary;
 using ValidationLibrary.ExtensionMethods;
 using static ValidateLogin.Classes.CommonDialogs;
@@ -47,7 +48,11 @@ namespace ValidateLogin
         {
             ProcessLogin();
         }
-
+        /// <summary>
+        /// Determine if rules for a resetting a password are met using property data
+        /// annotation in the class CustomerLogin. Rules for a password are done
+        /// in <see cref="PasswordCheck"/> class.
+        /// </summary>
         private void ProcessLogin()
         {
             EntityValidationResult validationResult = ValidationHelper.ValidateEntity(_customerLogin);
@@ -78,10 +83,8 @@ namespace ValidateLogin
             }
         }
 
-        private void PasswordCheckCanExecuteCommand(object sender, CanExecuteRoutedEventArgs e)
-        {
+        private void PasswordCheckCanExecuteCommand(object sender, CanExecuteRoutedEventArgs e) => 
             e.CanExecute = _retryCount < 3;
-        }
 
         private void ExitApplicationCommandOnExecute(object sender, ExecutedRoutedEventArgs e)
         {
@@ -91,12 +94,12 @@ namespace ValidateLogin
             }
         }
 
-        private void ApplicationExitCanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
+        private void ApplicationExitCanExecute(object sender, CanExecuteRoutedEventArgs e) => 
             e.CanExecute = true;
-        }
+
         private void MainWindow_OnClosing(object sender, CancelEventArgs e)
         {
+
             if (Environment.UserName == "PayneK")
             {
                 Application.Current.Shutdown();
@@ -119,10 +122,9 @@ namespace ValidateLogin
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void PasswordConfirmTextBox_OnPasswordChanged(object sender, RoutedEventArgs e)
-        {
+        private void PasswordConfirmTextBox_OnPasswordChanged(object sender, RoutedEventArgs e) => 
             _customerLogin.PasswordConfirmation = ((PasswordBox) sender).Password;
-        }
+
         /// <summary>
         /// Set password to the logon object
         /// </summary>

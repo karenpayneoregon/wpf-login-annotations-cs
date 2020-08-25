@@ -2,6 +2,8 @@
 
 Simple WPF login demonstration using data annotations using a custom validation rule.
 
+For an application in the wild one might think that showing validation issues is bad, not in the case were this is an internal process and one must also enter their current password or a temp password provided by an admin or reset password service.
+
 ### Requires
 
 For work window image animation [WPF Animated GIF](http://example.com). Perform a NuGet restore packages before building the solution.
