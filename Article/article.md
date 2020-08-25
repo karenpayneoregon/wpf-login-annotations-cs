@@ -403,4 +403,8 @@ The project [ValidationLibrary](https://github.com/karenpayneoregon/wpf-login-an
 The project [AnnotationUnitTest](https://github.com/karenpayneoregon/wpf-login-annotations-cs/tree/master/AnnotationUnitTest) demonstrate several common annotations and a custom annotation of social security number going past the normal nine digit test.
 # See also
 
-Microsoft [documentation](https://referencesource.microsoft.com/#System.ComponentModel.DataAnnotations/DataAnnotations/CreditCardAttribute.cs) on standard annotation classes. Note that in some cases the standard attributes will not always fit your needs such as email addresses which leads into creating your own like for [social security number](https://github.com/karenpayneoregon/wpf-login-annotations-cs/blob/master/ValidationLibrary/CommonRules/SocialSecurityAttribute.cs).
+Microsoft [documentation](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-3.1) on standard annotation classes. Note that in some cases the standard attributes will not always fit your needs such as email addresses which leads into creating your own like for [social security number](https://github.com/karenpayneoregon/wpf-login-annotations-cs/blob/master/ValidationLibrary/CommonRules/SocialSecurityAttribute.cs). Also, see [source code](https://referencesource.microsoft.com/#System.ComponentModel.DataAnnotations/DataAnnotations/CreditCardAttribute.cs).
+
+For VB.NET developers see the following [GitHub repository](https://github.com/karenpayneoregon/ClassValidationVisualBasic1).
+
+
