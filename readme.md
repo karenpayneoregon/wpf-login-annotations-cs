@@ -4,6 +4,8 @@ Simple WPF login demonstration using data annotations using a custom validation 
 
 For an application in the wild one might think that showing validation issues is bad, not in the case were this is an internal process and one must also enter their current password or a temp password provided by an admin or reset password service.
 
+The [following page](https://github.com/karenpayneoregon/wpf-login-annotations-cs/blob/master/Article/article.md) does a walkthrough for implementing a password reset along with several simple examples for string validation and social security validation going past *conventional* is it nine characters that are numbers.
+
 ### Requires
 
 For work window image animation [WPF Animated GIF](http://example.com). Perform a NuGet restore packages before building the solution.

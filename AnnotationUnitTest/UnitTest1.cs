@@ -51,14 +51,16 @@ namespace AnnotationUnitTest
                 SSN = "201518161"
             };
 
-            EntityValidationResult validationResult = ValidationHelper.ValidateEntity(person);
-            Console.WriteLine(validationResult.ErrorMessageList());
-            Assert.IsFalse(validationResult.HasError);
+            EntityValidationResult validationResult = 
+                ValidationHelper.ValidateEntity(person);
 
+            Assert.IsFalse(validationResult.HasError);
+            var test = validationResult.Errors;
             person.FirstName = "";
             validationResult = ValidationHelper.ValidateEntity(person);
 
-            Assert.IsTrue(validationResult.Errors.Count == 1 && validationResult.ErrorMessageList().Contains("First Name"));
+            Assert.IsTrue(validationResult.Errors.Count == 1 && 
+                          validationResult.ErrorMessageList().Contains("First Name"));
 
         }
         /// <summary>
@@ -75,7 +77,9 @@ namespace AnnotationUnitTest
                 SSN = "078-05-1120"
             };
 
-            EntityValidationResult validationResult = ValidationHelper.ValidateEntity(person);
+            EntityValidationResult validationResult = 
+                ValidationHelper.ValidateEntity(person);
+
             Console.WriteLine(validationResult.ErrorMessageList());
             Assert.IsTrue(validationResult.HasError);
           

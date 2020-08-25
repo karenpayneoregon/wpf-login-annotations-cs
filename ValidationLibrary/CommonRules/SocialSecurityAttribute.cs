@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ValidationLibrary.CommonRules
 {
@@ -34,12 +30,8 @@ namespace ValidationLibrary.CommonRules
 
         public override bool IsValid(object value)
         {
-            if (value is null)
-            {
-                return false;
-            }
-
-            return Regex.IsMatch(value.ToString().Replace("-", ""), @"^(?!\b(\d)\1+\b)(?!123456789|219099999|078051120)(?!666|000|9\d{2})\d{3}(?!00)\d{2}(?!0{4})\d{4}$");
+            return value is string && (!(value is null) && Regex.IsMatch(value.ToString().Replace("-", ""),
+                @"^(?!\b(\d)\1+\b)(?!123456789|219099999|078051120)(?!666|000|9\d{2})\d{3}(?!00)\d{2}(?!0{4})\d{4}$"));
         }
     }
 }
