@@ -38,6 +38,8 @@ namespace ValidateLogin
 
             DataContext = _customerLogin;
 
+            
+
         }
         /// <summary>
         /// Validate user name and password logic for up to three failed attempts

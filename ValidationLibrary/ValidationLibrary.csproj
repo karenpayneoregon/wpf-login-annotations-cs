@@ -47,12 +47,12 @@
     <Compile Include="CommonRules\SocialSecurityAttribute.cs" />
     <Compile Include="EntityValidationResult.cs" />
     <Compile Include="EntityValidator.cs" />
+    <Compile Include="ExtensionMethods\ValidatorExtensions.cs" />
     <Compile Include="GenericValidationRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExtensionMethods\StringExtensions.cs" />
     <Compile Include="PropertyChangedNotification.cs" />
     <Compile Include="ValidationHelper.cs" />
-    <Compile Include="ExtensionMethods\ValidatorExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.md" />

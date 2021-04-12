@@ -8,10 +8,10 @@
     Width="320.12"
     Height="251.129"
     Closing="MainWindow_OnClosing"
+    Icon="sharp.ico"
     KeyDown="Window_KeyDown"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
-    Icon="sharp.ico"
     mc:Ignorable="d">
 
 
