@@ -74,7 +74,7 @@ namespace ValidateLogin1
 
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void CancellationButton_Click(object sender, EventArgs e)
         {
             Close();
         }

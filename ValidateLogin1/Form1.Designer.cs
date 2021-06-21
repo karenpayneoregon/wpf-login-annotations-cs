@@ -36,7 +36,7 @@
             this.ConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ContinueButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.CancellationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -99,22 +99,22 @@
             this.ContinueButton.UseVisualStyleBackColor = true;
             this.ContinueButton.Click += new System.EventHandler(this.ContinueButton_Click);
             // 
-            // CancelButton
+            // CancellationButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(219, 145);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(87, 23);
-            this.CancelButton.TabIndex = 7;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancellationButton.Location = new System.Drawing.Point(219, 145);
+            this.CancellationButton.Name = "CancellationButton";
+            this.CancellationButton.Size = new System.Drawing.Size(87, 23);
+            this.CancellationButton.TabIndex = 7;
+            this.CancellationButton.Text = "Cancel";
+            this.CancellationButton.UseVisualStyleBackColor = true;
+            this.CancellationButton.Click += new System.EventHandler(this.CancellationButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 212);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.CancellationButton);
             this.Controls.Add(this.ContinueButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ConfirmPasswordTextBox);
@@ -143,7 +143,7 @@
         private System.Windows.Forms.TextBox ConfirmPasswordTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ContinueButton;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button CancellationButton;
     }
 }
 
