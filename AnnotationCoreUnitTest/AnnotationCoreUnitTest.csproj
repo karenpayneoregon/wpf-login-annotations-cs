@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>9.0</LangVersion>
+		<TargetFramework>net5.0-windows</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+		<PackageReference Include="MSTest.TestAdapter" Version="2.1.1" />
+		<PackageReference Include="MSTest.TestFramework" Version="2.1.1" />
+		<PackageReference Include="coverlet.collector" Version="1.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ValidationCoreLibrary\ValidationCoreLibrary.csproj" />
+	</ItemGroup>
+
+</Project>
