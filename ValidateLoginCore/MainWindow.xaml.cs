@@ -29,10 +29,10 @@ namespace ValidateLoginCore
     {
         private int _retryCount = 0;
 
-        public static RoutedCommand ContinueRoutedCommand = new RoutedCommand();
-        public static RoutedCommand ExitRoutedCommand = new RoutedCommand();
+        public static RoutedCommand ContinueRoutedCommand = new();
+        public static RoutedCommand ExitRoutedCommand = new();
 
-        private readonly CustomerLogin _customerLogin = new CustomerLogin();
+        private readonly CustomerLogin _customerLogin = new();
         public MainWindow()
         {
             InitializeComponent();
