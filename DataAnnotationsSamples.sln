@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		article.md = article.md
 		readme.md = readme.md
+		upgrading.md = upgrading.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateLogin1", "ValidateLogin1\ValidateLogin1.csproj", "{B68C2983-294F-4065-92F3-AC309651DA35}"

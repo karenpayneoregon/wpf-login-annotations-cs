@@ -14,6 +14,8 @@ Change .NET Framework to a newer version, build. If successful commit and write 
 
 ### Recommendation 2 classic .NET Framework to .NET Core
 
+:heavy_check_mark:  This repository code is a great example.
+
 There are tools and porting tools found here. Before starting read the documentation then;
 
 Learn for instance to work with GitHub repositories as Visual Studio works well with [using Git experience](https://docs.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2019) in Visual Studio. Follow instructions on [this page](https://karenpayneoregon.github.io/visual-studio/gitIntro.html) to join GitHub.
