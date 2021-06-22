@@ -6,10 +6,11 @@
 	  <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <!-- No need for this, kept here for others to unders
   <ItemGroup>
     <Reference Include="PresentationFramework">
       <HintPath>..\..\..\..\..\..\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\3.1.0\ref\netcoreapp3.1\PresentationFramework.dll</HintPath>
     </Reference>
-  </ItemGroup>
+  </ItemGroup>-->
 
 </Project>

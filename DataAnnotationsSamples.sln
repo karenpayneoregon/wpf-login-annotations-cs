@@ -13,9 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationLibrary", "Valida
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F3829DC6-E51A-4D99-B824-0EA0C091D85B}"
 	ProjectSection(SolutionItems) = preProject
-		Article\article.md = Article\article.md
+		article.md = article.md
 		readme.md = readme.md
-		upgrading.md = upgrading.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateLogin1", "ValidateLogin1\ValidateLogin1.csproj", "{B68C2983-294F-4065-92F3-AC309651DA35}"
@@ -28,9 +27,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit test", "Unit test", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationUnitTest", "AnnotationUnitTest\AnnotationUnitTest.csproj", "{C16252C2-7025-4FE2-899C-5D3E31823674}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationCoreLibrary", "ValidationCoreLibrary\ValidationCoreLibrary.csproj", "{12340A4E-3A10-4FBF-8EDD-314BA3DC1A3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidationCoreLibrary", "ValidationCoreLibrary\ValidationCoreLibrary.csproj", "{12340A4E-3A10-4FBF-8EDD-314BA3DC1A3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationCoreUnitTest", "AnnotationCoreUnitTest\AnnotationCoreUnitTest.csproj", "{28E46105-0180-42A8-AC87-661998B1EEEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnotationCoreUnitTest", "AnnotationCoreUnitTest\AnnotationCoreUnitTest.csproj", "{28E46105-0180-42A8-AC87-661998B1EEEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
