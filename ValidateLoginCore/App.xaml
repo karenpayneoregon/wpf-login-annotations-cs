@@ -1,9 +1,9 @@
 ﻿<Application
-    x:Class="ValidateLogin.App"
+    x:Class="ValidateLoginCore.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ValidateLoginCore"
     StartupUri="MainWindow.xaml">
-
     <Application.Resources>
         <Style TargetType="{x:Type Button}">
 

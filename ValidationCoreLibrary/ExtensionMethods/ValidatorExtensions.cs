@@ -1,10 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.RegularExpressions;
-using ValidationCoreLibrary;
-using ValidationCoreLibrary.ExtensionMethods;
 
-namespace ValidationLibrary.ExtensionMethods
+namespace ValidationCoreLibrary.ExtensionMethods
 {
     public static class ValidatorExtensions
     {

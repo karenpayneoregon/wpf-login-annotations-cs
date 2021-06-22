@@ -6,7 +6,7 @@ using AnnotationCoreUnitTest.Classes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ValidationCoreLibrary;
 using ValidationCoreLibrary.CommonRules;
-using ValidationLibrary.ExtensionMethods;
+using ValidationCoreLibrary.ExtensionMethods;
 
 
 namespace AnnotationCoreUnitTest
