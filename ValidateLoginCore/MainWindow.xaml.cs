@@ -17,7 +17,6 @@ using ValidateLoginCore.Classes;
 using ValidateLoginCore.Classes.ValidationRules;
 using ValidationCoreLibrary;
 using ValidationCoreLibrary.ExtensionMethods;
-//using ValidationLibrary.ExtensionMethods;
 using static ValidateLoginCore.Classes.CommonDialogs;
 
 namespace ValidateLoginCore
