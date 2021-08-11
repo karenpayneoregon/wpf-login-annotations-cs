@@ -38,21 +38,27 @@ namespace ValidationLibrary
                                 if (!validationAttribute.IsValid(itemValue))
                                 {
                                     if (!string.IsNullOrWhiteSpace(result))
+                                    {
                                         result += Environment.NewLine;
+                                    }
+
                                     if (string.IsNullOrEmpty(validationAttribute.ErrorMessage))
+                                    {
                                         result += string.Format("Validation on {0} failed!", propertyInfo.Name);
+                                    }
                                     else
+                                    {
                                         result += validationAttribute.ErrorMessage;
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-            if (!string.IsNullOrWhiteSpace(result))
-                return new ValidationResult(false, result);
-            else
-                return ValidationResult.ValidResult;
+            return !string.IsNullOrWhiteSpace(result) ? 
+                new ValidationResult(false, result) : 
+                ValidationResult.ValidResult;
         }
     }
 }

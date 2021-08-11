@@ -82,6 +82,7 @@ namespace LoginCoreUnitTest
             Assert.IsTrue(validationResult.HasError);
 
             string message = "Passwords do not match , please try again";
+            
             Assert.IsTrue(validationResult.ErrorMessageList().Contains(message));
             Debug.WriteLine(validationResult.ErrorMessageList());
 
