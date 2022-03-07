@@ -54,6 +54,7 @@
             this.UserNameTextBox.Name = "UserNameTextBox";
             this.UserNameTextBox.Size = new System.Drawing.Size(163, 20);
             this.UserNameTextBox.TabIndex = 1;
+            this.UserNameTextBox.Text = "KarenPayne";
             // 
             // PasswordLabel
             // 
@@ -71,6 +72,7 @@
             this.PasswordTextBox.PasswordChar = '●';
             this.PasswordTextBox.Size = new System.Drawing.Size(163, 20);
             this.PasswordTextBox.TabIndex = 3;
+            this.PasswordTextBox.Text = "@Password1";
             // 
             // ConfirmPasswordTextBox
             // 
@@ -79,6 +81,7 @@
             this.ConfirmPasswordTextBox.PasswordChar = '●';
             this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(163, 20);
             this.ConfirmPasswordTextBox.TabIndex = 4;
+            this.ConfirmPasswordTextBox.Text = "@Password1";
             // 
             // label2
             // 
@@ -128,7 +131,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reset password";
+            this.Text = "Code sample";
             this.ResumeLayout(false);
             this.PerformLayout();
 

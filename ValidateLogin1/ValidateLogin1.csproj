@@ -88,6 +88,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="figure1.png" />
+    <Content Include="readme.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -96,6 +98,10 @@
     <Resource Include="sharp.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ValidateLogin\ValidateLogin.csproj">
+      <Project>{21AA71A1-D350-4008-B272-117169DCCEDE}</Project>
+      <Name>ValidateLogin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ValidationLibrary\ValidationLibrary.csproj">
       <Project>{7630fcb6-b946-4ce1-9172-f52960726c5f}</Project>
       <Name>ValidationLibrary</Name>

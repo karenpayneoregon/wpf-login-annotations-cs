@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using ValidateLogin1.Classes;
+using ValidateLogin.Classes;
 using ValidationLibrary;
 using ValidationLibrary.ExtensionMethods;
+using CustomerLogin = ValidateLogin1.Classes.CustomerLogin;
 
 namespace ValidateLogin1
 {
@@ -51,6 +52,21 @@ namespace ValidateLogin1
             }
             else
             {
+                if (DataOperations.UserExists(customerLogin.UserName))
+                {
+                    Console.WriteLine("User exists");
+                }
+                else
+                {
+                    /*
+                     * This method is not implemented
+                     * For a real app, you should not pass around a password
+                     *
+                     * See the following for one way to word with passwords
+                     * https://stackoverflow.com/questions/17837862/encrypt-in-sql-decrypt-in-net-how-i-made-it
+                     */
+                    DataOperations.AddUser(customerLogin.UserName, customerLogin.Password);
+                }
                 Hide();
 
                 var workForm = new WorkForm();
