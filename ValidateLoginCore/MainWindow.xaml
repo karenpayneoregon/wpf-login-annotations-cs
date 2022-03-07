@@ -8,11 +8,11 @@
     Title="Reset password"
     Width="320.12"
     Height="251.129"
+    d:DataContext="{d:DesignData}"
     Closing="MainWindow_OnClosing"
     KeyDown="Window_KeyDown"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
-    d:DataContext="{d:DesignData }" 
     mc:Ignorable="d">
 
 
@@ -38,6 +38,7 @@
             Content="User name"
             RenderTransformOrigin="0.45,0.261" />
         <TextBox
+            x:Name="UserNameTextBox"
             Width="187"
             Height="23"
             Margin="88,34,0,0"
