@@ -7,7 +7,7 @@ namespace ValidationCoreLibrary.ExtensionMethods
     public static class ValidatorExtensions
     {
         /// <summary>
-        /// Remove extra whitespace
+        /// Remove extra whitespace and split strings with upper cased characters
         /// </summary>
         /// <param name="sender"></param>
         /// <returns></returns>
@@ -22,15 +22,15 @@ namespace ValidationCoreLibrary.ExtensionMethods
         public static string ErrorMessageList(this EntityValidationResult sender)
         {
 
-            var sb = new StringBuilder();
-            sb.AppendLine("Validation issues\n");
+            StringBuilder builder = new ();
+            builder.AppendLine("Validation issues\n");
 
-            foreach (var errorItem in sender.Errors)
+            foreach (ValidationResult errorItem in sender.Errors)
             {
-                sb.AppendLine(errorItem.SanitizedErrorMessage() + "\n");
+                builder.AppendLine(errorItem.SanitizedErrorMessage() + "\n");
             }
 
-            return sb.ToString();
+            return builder.ToString();
 
         }
 

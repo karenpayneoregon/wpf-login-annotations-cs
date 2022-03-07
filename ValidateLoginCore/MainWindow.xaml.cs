@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,8 @@ using ValidateLoginCore.Classes.ValidationRules;
 using ValidationCoreLibrary;
 using ValidationCoreLibrary.ExtensionMethods;
 using static ValidateLoginCore.Classes.CommonDialogs;
+using System.Windows.Interop;
+using WindowsHelpers.Classes;
 
 namespace ValidateLoginCore
 {
@@ -26,12 +29,37 @@ namespace ValidateLoginCore
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Icon _ExplainationIcon;
+        private IntPtr _intPtr;
+
+        private bool _shown;
+
         private int _retryCount = 0;
 
         public static RoutedCommand ContinueRoutedCommand = new();
         public static RoutedCommand ExitRoutedCommand = new();
 
         private readonly CustomerLogin _customerLogin = new();
+
+        protected override void OnContentRendered(EventArgs e)
+        {
+
+            base.OnContentRendered(e);
+
+            if (_shown)
+            {
+                return;
+            }
+
+            _shown = true;
+            Window window = GetWindow(this);
+            var windowInterop = new WindowInteropHelper(window ?? throw new InvalidOperationException());
+            _intPtr = windowInterop.Handle;
+
+            _ExplainationIcon = ImageHelpers.BitmapImageToIcon("Resources\\Explaination.ico");
+
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -73,7 +101,7 @@ namespace ValidateLoginCore
 
                 if (_retryCount >= 3)
                 {
-                    MessageBox.Show("Too many attempts");
+                    Dialogs.BadAttempt(_intPtr, _ExplainationIcon);
                     Application.Current.Shutdown();
                 }
                 else
