@@ -12,6 +12,7 @@
     KeyDown="Window_KeyDown"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
+    d:DataContext="{d:DesignData }" 
     mc:Ignorable="d">
 
 
