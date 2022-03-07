@@ -40,13 +40,13 @@ namespace WindowsHelpers.Classes
                 SizeToContent = true,
                 Heading = heading,
                 Icon = new TaskDialogIcon(icon),
+                Footnote = new TaskDialogFootnote() { Text = "Copyright: Some company" },
                 Buttons = buttons
             };
 
             var result = TaskDialog.ShowDialog(owner, page, TaskDialogStartupLocation.CenterOwner);
 
             return (DialogResult)result.Tag == DialogResult.Yes;
-
         }
         public static void Information(IntPtr owner, string heading, string buttonText = "Ok")
         {

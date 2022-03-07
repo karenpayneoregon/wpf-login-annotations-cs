@@ -30,6 +30,7 @@ namespace ValidateLoginCore
     public partial class MainWindow : Window
     {
         private Icon _ExplainationIcon;
+        private Icon _QuestionIcon;
         private IntPtr _intPtr;
 
         private bool _shown;
@@ -52,11 +53,13 @@ namespace ValidateLoginCore
             }
 
             _shown = true;
+
             Window window = GetWindow(this);
             var windowInterop = new WindowInteropHelper(window ?? throw new InvalidOperationException());
             _intPtr = windowInterop.Handle;
 
             _ExplainationIcon = ImageHelpers.BitmapImageToIcon("Resources\\Explaination.ico");
+            _QuestionIcon = ImageHelpers.BitmapImageToIcon("Resources\\QuestionBlue.ico");
 
         }
 
@@ -126,7 +129,7 @@ namespace ValidateLoginCore
 
         private void ExitApplicationCommandOnExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            if (Question("Cancel login?"))
+            if (Dialogs.Question(_intPtr, "Cancel login", _QuestionIcon))
             {
                 Application.Current.Shutdown();
             }
@@ -144,7 +147,7 @@ namespace ValidateLoginCore
             }
             else
             {
-                if (Question("Cancel login?"))
+                if (Dialogs.Question(_intPtr, "Cancel login", _QuestionIcon))
                 {
                     Application.Current.Shutdown();
                 }
