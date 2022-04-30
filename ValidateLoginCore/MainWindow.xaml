@@ -1,4 +1,11 @@
-﻿<Window
+﻿<!--
+    Data binding
+    d:DataContext="{d:DesignData}"
+    See https://docs.microsoft.com/en-us/windows/uwp/data-binding/displaying-data-in-the-designer
+    
+    Button logic via routed commands
+-->
+<Window
     x:Class="ValidateLoginCore.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -30,6 +37,7 @@
 
     </Window.CommandBindings>
 
+    <!--  Set focus to user name input  -->
     <Grid FocusManager.FocusedElement="{Binding ElementName=UserNameTextBox}">
         <Label
             Margin="14,30,0,0"

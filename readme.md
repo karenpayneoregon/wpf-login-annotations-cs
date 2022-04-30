@@ -414,12 +414,6 @@ For VB.NET developers see the following [GitHub repository](https://github.com/k
 
 
 
-### Requires
-
-For work window image animation [WPF Animated GIF](http://example.com). Perform a NuGet restore packages before building the solution.
-
-![screenshot](assets/Login.png)
-
 Usually, to protect someone for guessing a user's password a common practice is to require upper-case characters, include at least one numeric and one special character. The following class provides a place to set rules as per uppercased, numeric and special chars.
 
 ```csharp
@@ -492,3 +486,7 @@ Using source control in this case on both projects keeps working code safe.
 Always test!!!
 
 ![Figure2](assets/figure2.png)
+
+#  See also
+
+The following [repository](https://github.com/karenpayneoregon/ClassValidationVisualBasic.git) where I go deeper into data annotations and fluid assertions.

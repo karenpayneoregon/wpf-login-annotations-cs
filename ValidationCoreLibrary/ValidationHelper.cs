@@ -8,9 +8,7 @@
         /// <typeparam name="T">Type of class</typeparam>
         /// <param name="entity">Instance of class to validate</param>
         /// <returns></returns>
-        public static EntityValidationResult ValidateEntity<T>(T entity) where T : class
-        {
-            return (new EntityValidator<T>()).Validate(entity);
-        }
+        public static EntityValidationResult ValidateEntity<T>(T entity) where T : class 
+            => (new EntityValidator<T>()).Validate(entity);
     }
 }

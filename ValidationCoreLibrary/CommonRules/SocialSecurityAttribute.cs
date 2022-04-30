@@ -26,7 +26,7 @@ namespace ValidationCoreLibrary.CommonRules
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
     public class SocialSecurityAttribute : ValidationAttribute
     {
-        public string SocialValue { get; set; }
+        //public string SocialValue { get; set; }
 
         public override bool IsValid(object value) =>
             value is string && Regex.IsMatch(value.ToString().Replace("-", ""),

@@ -44,7 +44,7 @@ namespace ValidationLibrary
 
                                     if (string.IsNullOrEmpty(validationAttribute.ErrorMessage))
                                     {
-                                        result += string.Format("Validation on {0} failed!", propertyInfo.Name);
+                                        result += $"Validation on {propertyInfo.Name} failed!";
                                     }
                                     else
                                     {

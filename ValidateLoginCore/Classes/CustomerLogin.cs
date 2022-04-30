@@ -25,7 +25,10 @@ namespace ValidateLoginCore.Classes
         /// Confirmation of user password
         /// </summary>
         /// <returns>plain text password</returns>
-        [Compare("Password", ErrorMessage = "Passwords do not match, please try again"), DataType(DataType.Text)]
+        [Compare(
+             "Password", 
+             ErrorMessage = "Passwords do not match, please try again"), 
+         DataType(DataType.Text)]
         [StringLength(20, MinimumLength = 6)]
         public string PasswordConfirmation { get; set; }
         public override string ToString() => UserName;

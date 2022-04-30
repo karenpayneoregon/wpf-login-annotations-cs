@@ -98,9 +98,8 @@ namespace ValidationCoreLibrary
 
             string error = string.Empty;
             var value = GetValue(propertyName);
-            var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>(1);
-            var result = Validator.TryValidateProperty(
-                value,
+            var results = new List<ValidationResult>(1);
+            var result = Validator.TryValidateProperty(value,
                 new ValidationContext(this, null, null)
                 {
                     MemberName = propertyName

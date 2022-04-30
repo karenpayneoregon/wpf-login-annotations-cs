@@ -8,7 +8,7 @@ namespace ValidationCoreLibrary.CommonRules
         public override bool IsValid(object value)
         {
             var validPassword = false;
-            var reason = string.Empty;
+            var reason = string.Empty; // for debugging only
             var password = (value == null) ? string.Empty : value.ToString();
 
             if (string.IsNullOrWhiteSpace(password) || password.Length < 6)
@@ -28,14 +28,7 @@ namespace ValidationCoreLibrary.CommonRules
                 }
             }
 
-            if (validPassword)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return validPassword;
 
         }
 

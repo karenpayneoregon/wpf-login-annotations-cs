@@ -23,15 +23,15 @@ namespace ValidationLibrary.ExtensionMethods
         public static string ErrorMessageList(this EntityValidationResult sender)
         {
 
-            var sb = new StringBuilder();
-            sb.AppendLine("Validation issues\n");
+            var builder = new StringBuilder();
+            builder.AppendLine("Validation issues\n");
 
             foreach (var errorItem in sender.Errors)
             {
-                sb.AppendLine(errorItem.SanitizedErrorMessage() + "\n");
+                builder.AppendLine(errorItem.SanitizedErrorMessage() + "\n");
             }
 
-            return sb.ToString();
+            return builder.ToString();
 
         }
 

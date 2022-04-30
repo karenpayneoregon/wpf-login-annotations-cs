@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,6 @@ using ValidateLoginCore.Classes;
 using ValidateLoginCore.Classes.ValidationRules;
 using ValidationCoreLibrary;
 using ValidationCoreLibrary.ExtensionMethods;
-using static ValidateLoginCore.Classes.CommonDialogs;
 using System.Windows.Interop;
 using WindowsHelpers.Classes;
 
@@ -125,12 +125,14 @@ namespace ValidateLoginCore
         }
 
         private void PasswordCheckCanExecuteCommand(object sender, CanExecuteRoutedEventArgs e) =>
-            e.CanExecute = _retryCount < 3;
+            e.CanExecute = _retryCount < 4;
 
+        private bool _allowExit;
         private void ExitApplicationCommandOnExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            if (Dialogs.Question(_intPtr, "Cancel login", _QuestionIcon))
+            if (Dialogs.Question(_intPtr, "Cancel login?", _QuestionIcon))
             {
+                _allowExit = true;
                 Application.Current.Shutdown();
             }
         }
@@ -140,22 +142,13 @@ namespace ValidateLoginCore
 
         private void MainWindow_OnClosing(object sender, CancelEventArgs e)
         {
-
-            if (Environment.UserName == "PayneK")
+            if (_allowExit)
             {
                 Application.Current.Shutdown();
             }
             else
             {
-                if (Dialogs.Question(_intPtr, "Cancel login", _QuestionIcon))
-                {
-                    Application.Current.Shutdown();
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-
+                e.Cancel = true;
             }
         }
         /// <summary>
